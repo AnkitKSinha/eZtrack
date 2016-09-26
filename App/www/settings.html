@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Log in</title>
+     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirkxsode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/animsition.min.js"></script>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Create.css">
+    
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/iconate.min.css">
+    <link rel="stylesheet" href="css/animsition.min.css">
+    
+    <link rel="stylesheet" href="css/androidCreate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <style>
+        
+        .icon-image
+        {
+            height:100px;
+            width:100px;
+        }
+        .input-lg
+        {
+            border:none;
+            border-bottom:2px solid #000;
+            border-radius:0px;
+        }
+        .input-feild
+        {
+            
+        }
+        .maintain-margin
+        {
+            margin:10px;
+        }
+        .maitain-padding
+        {
+            padding:5px;
+        }
+        
+        ul li
+        {
+            border:1px Solid #f0f0f0;
+            font-size:20px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            height:55px;
+        }
+        
+    </style>
+    <script src="js/page-change.js"></script>
+    <script src="js/settings.js"></script>
+</head>
+
+<body>
+    
+    <div class="col-xs-12 bg-App" style="height:10vh;color:#fff;box-shadow:0px 5px 3px #ccc">
+        <span class="pull-left fa fa-arrow-left text-bold name-text maintain-margin maintain-padding" style="color:#fff; font-size:30px;"></span>
+<!--        <span class="name-text title-text maintain-margin maintain-padding" style="margin-top:15px;font-size:26px;color:#fff;">Settings</span>-->
+    </div>
+    
+    <div class="icon col-xs-12 text-center" style="height:30vh;border:1px Solid #c0c0c0;">
+        <img src="images/icon.jpg" class="img-circle img-responsive icon-image center-block" style="margin-top:20px;">
+        <span class="" style="font-size:30px;letter-spacing:2px;margin-bottom:10px;">
+            Ankit Sinha
+        </span>
+    </div>
+    <div class="col-xs-12 settings-options" style="margin-top:20px;">
+        <ul class="list-group text-center">
+            <li class="list-group-item">Notification</li>
+            <li class="list-group-item">Reminder</li>
+            <li class="list-group-item">Account</li>
+            <li class="list-group-item">Device</li>
+            <li class="list-group-item">Log Out</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Register</title>
+     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirkxsode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }  @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }           @viewport { user-zoom: fixed ; }
+    </style>
+
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <script src="js/app.js"></script>           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
+    
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/animsition.min.js"></script>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Create.css">
+    <link rel="stylesheet" href="css/androidCreate.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/iconate.min.css">
+    <link rel="stylesheet" href="css/animsition.min.css">
+    
+    <style>
+        
+        .icon-image
+        {
+            height:100px;
+            width:100px;
+        }
+        .input-lg
+        {
+            border:none;
+            border-bottom:2px solid #000;
+            border-radius:0px;
+        }
+        .input-feild
+        {
+            
+        }
+        .maintain-margin
+        {
+            margin:10px;
+        }
+        .maitain-padding
+        {
+            padding:5px;
+        }
+        .title-text
+        {
+            font-size:30px;
+            color:#fff;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+           $(".register-submit").click(function(){
+                $.post("http://192.168.43.189:8080/eztrack/Register.jsp",
+                       {
+                        fname: $("#fname").val(),
+                        lname: $("#lname").val(),
+                        username: $("#uname").val(),
+                        password: $("#password").val(),
+                        email: $("#email").val()
+                    },
+                       function(){
+                        console.log("Register Success");            
+                }
+                    
+                );
+           });
+        });
+    </script>
+    
+</head>
+    
+
+<body>
+    <div class="col-xs-12 bg-App" style="height:10vh;color:#fff;">
+        <span class="pull-left glyphicon glyphicon-arrow-left text-bold name-text maintain-margin maintain-padding" style="color:#fff;"></span>
+        <span class="text-bold name-text title-text maintain-margin maintain-padding">Register</span>
+    </div>
+   
+    <div class="col-xs-12 register-form" style="margin-top:10vh;">
+        <div class="col-xs-12 register-name maintain-margin maintain-padding">
+            <div class="col-xs-6 register-fname">
+                <input type="text" name="fname" id="fname" class="input-lg col-xs-12" placeholder="First Name">
+            </div>
+            <div class="col-xs-6 register-lname">
+                <input type="text" name="lname" id="lname" class="input-lg col-xs-12" placeholder="Last Name">
+            </div>
+        </div>
+        <div class="col-xs-12 register-uname maintain-margin maintain-padding">
+            <input type="text" name="uname" id="uname" class="input-lg col-xs-12" placeholder="Username">
+        </div>
+        <div class="col-xs-12 register-password maintain-margin maintain-padding">
+            <input type="password" name="password" id="password" class="input-lg col-xs-12" placeholder="Password">
+        </div>
+        <div class="col-xs-12 register-password maintain-margin maintain-padding">
+            <input type="password" name="conf-password" id="conf-password" class="input-lg col-xs-12" placeholder="Confirm Password">
+        </div>
+        <div class="col-xs-12 register-email maintain-margin maintain-padding">
+            <input type="text" name="email" id="email" class="input-lg col-xs-12" placeholder="email">
+        </div> 
+        <div class="col-xs-12 submit-form maintain-margin maintain-padding footer">
+            <button class="btn btn-lg center-block btn-primary register-submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
+
