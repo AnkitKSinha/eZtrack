@@ -1,10 +1,10 @@
 # eZtrack
-Install Tomcat 8.0
+<h2>Install Tomcat 8.0</h2>
 
-Copy Paste /Server/eztrack.war to tomcat/webapps
+<i>Copy Paste /Server/eztrack.war to tomcat/webapps</i>
 
-Install MySQL Server
+<h2>Install MySQL Server</h2>
 
-import eztrack.sql 
+<h2>import eztrack.sql </h2>
 
-  $ mysql -u root -p -h localhost eztrack < eztrack.sql
+<pre>$ mysql -u root -p -h localhost eztrack < eztrack.sql </pre>
