@@ -24,7 +24,7 @@
   <pre>$cd Tomcat</pre>
   <i>Download Tomcat</i>
   <pre>$wget http://mirror.fibergrid.in/apache/tomcat/tomcat-8/v8.0.37/bin/apache-tomcat-8.0.37.tar.gz</pre>
-   <i>Might be diffrent</i>
+   (Might be diffrent)<br>
    <i>Extrack Tomcat</i>
    <pre>$tar xvf apache-tomcat-8.0.37.tar.gz</pre>
    <i>Copy eztrack.war to webapps/</i>
