@@ -5,7 +5,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "jsapp/template-blank-cordova-project-lite/sample.zip",
       "projectGuid": "ad274910-a6fc-4c4a-9c0d-61429aa278c4",
-      "lastModifiedDate": 1472832056802,
+      "lastModifiedDate": 1478980417040,
       "creationDate": 1472495366434
     },
     "XDK-app-designer": "false",
@@ -57,7 +57,7 @@
         "originType": "cordova.io",
         "origin": "cordova-plugin-device",
         "permissions": {},
-        "topLevel": false,
+        "topLevel": true,
         "gitref": "",
         "name": "Device",
         "description": "Cordova Device Plugin",
@@ -94,7 +94,7 @@
         "selectedState": "Included",
         "checksum": "5f6ce43e",
         "dependsOn": [],
-        "topLevel": false,
+        "topLevel": true,
         "cordovaVersion": ">=3.6.0",
         "author": "Sebastián Katzer",
         "permissions": {},
@@ -144,7 +144,7 @@
         "paramvals": {},
         "sourceLocation": "plugins/cordova-plugin-background-mode",
         "selectedState": "Included",
-        "checksum": "35ca81fa",
+        "checksum": "5abedbae",
         "dependsOn": [
           "cordova-plugin-device"
         ],
