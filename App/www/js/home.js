@@ -56,7 +56,7 @@ $(document).ready(function(){
                                     //alert("clicked!");
                                     var ud_id = $(this).attr("data-ud_id");
                                     localStorage.setItem("track_ud_id",ud_id);
-                                    window.location.replace("tracking-details.html");
+                                    window.location.replace("historicalData.html");
                                     //alert(ud_id);
                                     
                                     
@@ -124,7 +124,7 @@ $(document).ready(function(){
                                                 },
                                         complete: function(e)
                                                 {
-                                                    window.location.replace("test2.html");
+                                                    window.location.replace("home.html");
                                                 }
                                         
                                     });

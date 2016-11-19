@@ -80,21 +80,32 @@
     </div>
     
     <div class="icon col-xs-12 text-center" style="height:30vh;border:1px Solid #c0c0c0;">
-        <img src="images/icon.jpg" class="img-circle img-responsive icon-image center-block" style="margin-top:20px;">
-        <span class="" style="font-size:30px;letter-spacing:2px;margin-bottom:10px;">
+        <!--<img src="images/icon.jpg" class="img-circle img-responsive icon-image center-block" style="margin-top:20px;">-->
+        <div class="col-xs-12" style="margin:20px 0px;">
+            <span class="fa fa-user" style = "font-size:80px;" aria-hidden = "true"></span>
+        </div>
+        <span class="font-helvetica" style="font-size:30px;letter-spacing:2px;margin-bottom:10px;">
             Ankit Sinha
         </span>
     </div>
     <div class="col-xs-12 settings-options" style="margin-top:20px;">
         <ul class="list-group text-center">
-            <li class="list-group-item"><a href="notification.html">Notification</a></li>
-            <li class="list-group-item">Reminder</li>
-            <li class="list-group-item">Account</li>
-            <li class="list-group-item">Device</li>
-            <li class="list-group-item">Log Out</li>
+            <li class="list-group-item"><a href="#">Notification</a></li>
+            <li class="list-group-item"><a href="#">Reminder</a></li>
+            <li class="list-group-item"><a href="#">Account</a></li>
+            <li class="list-group-item"><a href="#">Device</a></li>
+            <li class="list-group-item"><a href="#" id = "Logout">Log Out</a></li>
         </ul>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#Logout").click(function(){
+                localStorage.setItem("u_id",0);
+                window.location.replace("index.html");
+            });
+        });
 
+    </script>
 </body>
 </html>
 

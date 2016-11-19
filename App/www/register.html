@@ -63,19 +63,38 @@
     <script>
         $(document).ready(function(){
            $(".register-submit").click(function(){
-                $.post("http://192.168.43.189:8080/eztrack/Register.jsp",
-                       {
-                        fname: $("#fname").val(),
-                        lname: $("#lname").val(),
-                        username: $("#uname").val(),
-                        password: $("#password").val(),
-                        email: $("#email").val()
-                    },
-                       function(){
-                        console.log("Register Success");            
-                }
+                alert("vhvhv");
+                var fname = $("#fname").val();
+                var lname = $("#lname").val();
+                var username = $("#uname").val();
+                var password = $("#password").val();
+                var email = $("#email").val();
+
+                if(fname.lenght == 0 || lname.lenght == 0 || username.lenght == 0 || password.lenght == 0 || email.lenght == 0){
+                    alert("Please fill in all the data!");
+                }else{
+                    var url = localStorage.getItem("ip");
+                    $.ajax({
+                       url: url+"/eztrack/Register.jsp",
+                        type:"POST",
+                        data:{
+                            fname : fname,
+                            lname : lname,
+                            username : username,
+                            password : password,
+                            email : email    
+                        },
+                        success: function(result){
+                                    alert("Welcome to eZtrack. Your account has been created. Login to Confirm.");
+                                    window.location.replace("index.html");
+                        },
+                        error: function(e){
+                                    alert("error" +e);
+                        }
+                        
+                    });
                     
-                );
+                }
            });
         });
     </script>
@@ -111,9 +130,9 @@
             <input type="text" name="email" id="email" class="input-lg col-xs-12" placeholder="email">
         </div> 
         <div class="col-xs-12 submit-form maintain-margin maintain-padding footer">
-            <a href="home.html">
+            
                 <button class="btn btn-lg center-block btn-primary register-submit">Submit</button>
-            </a>
+            
         </div>
     </div>
 </body>

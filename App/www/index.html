@@ -104,6 +104,7 @@
               }); 
             
             $(".login").click(function(){
+                alert(localStorage.getItem("ip")+"/eztrack/Login.jsp");
                 $.ajax({
                     url:localStorage.getItem("ip")+"/eztrack/Login.jsp",
                     type:"GET",
