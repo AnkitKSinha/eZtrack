@@ -38,15 +38,14 @@
             });
         });
     </script-->
-    
-    <!--This Part below here -->
-    
-    
     <script>
-        $(document).ready(function(){
-           $(".input-lg").click(function({
-               $(this).css("border-color","#4CAF50");
-           });
+        $(document).ready(function() {
+            $(".btn-lg").attr("disabled", true);
+            $(".input-lg").keyup(function() {
+                if($(this).length() != 0) {
+                    $("btn").removeAttr("disabled");
+                }
+            });
         });
     </script>
     <style>
@@ -54,6 +53,13 @@
         {
             border:none;
             border-bottom:2px solid #D3D3D3;
+            border-radius:0px;
+            outline:none;
+        }
+        .input-lg:focus
+        {
+            border:none;
+            border-bottom:2px solid #4CAF50;
             border-radius:0px;
             outline:none;
         }
@@ -94,7 +100,7 @@
             <input type="password" name="conf-password" id="conf-password" class="input-lg col-xs-12" placeholder="Atleast 6 characters" style="padding-left:0px;">
         </div>
         <div class="col-xs-12 submit-form maintain-margin maintain-padding " style="padding-top:25px;">
-                <button class="btn btn-lg center-block btn-primary register-submit" disabled>Change Password</button>
+                <button class="btn btn-lg center-block btn-primary register-submit">Change Password</button>
         </div>
     </div>
 </body>
