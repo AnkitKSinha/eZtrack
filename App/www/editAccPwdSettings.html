@@ -21,7 +21,8 @@
     <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see README for details -->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.min.js"></script>
-      <script src="js/animsition.min.js"></script>
+    <script src="js/animsition.min.js"></script>
+    <script src="js/password-change.js"></script>
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Create.css">
@@ -45,7 +46,7 @@
     <script>
         $(document).ready(function(){
            $(".input-lg").click(function({
-               $(this).css("border-color","#4CAF50");
+               $(this).css("border-color","CAF50");
            });
         });
     </script>
@@ -83,18 +84,18 @@
     <div class="col-xs-12 register-form" style="padding-top:25px;">
         <div class="col-xs-12 register-password maintain-margin maintain-padding">
             <span><em>Current Password</em></span><br>
-            <input type="password" name="password" id="password" class="input-lg col-xs-12" style="padding-left:0px;">
+            <input type="password" name="cur-password" id="cur-password" class="input-lg col-xs-12" style="padding-left:0px;">
         </div>
         <div class="col-xs-12 register-password maintain-margin maintain-padding" style="padding-top:5px;">
             <span><em>New Password</em></span>
-            <input type="password" name="conf-password" id="conf-password" class="input-lg col-xs-12" placeholder="Atleast 6 characters" style="padding-left:0px;">
+            <input type="password" name="new-password" id="new-password" class="input-lg col-xs-12" placeholder="Atleast 6 characters" style="padding-left:0px;">
         </div>
         <div class="col-xs-12 register-password maintain-margin maintain-padding" style="padding-top:5px;">
             <span><em>Confirm New Password</em></span>
             <input type="password" name="conf-password" id="conf-password" class="input-lg col-xs-12" placeholder="Atleast 6 characters" style="padding-left:0px;">
         </div>
         <div class="col-xs-12 submit-form maintain-margin maintain-padding " style="padding-top:25px;">
-                <button class="btn btn-lg center-block btn-primary register-submit" disabled>Change Password</button>
+                <button class="btn btn-lg center-block btn-primary password-submit">Change Password</button>
         </div>
     </div>
 </body>
