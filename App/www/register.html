@@ -39,8 +39,16 @@
         .input-lg
         {
             border:none;
-            border-bottom:2px solid #000;
+            border-bottom:2px solid #D3D3D3;
             border-radius:0px;
+            padding-left:0px;
+        }
+        .input-lg:focus
+        {
+            border:none;
+            border-bottom:2px solid #4CAF50;
+            border-radius:0px;
+            outline:none;
         }
         .input-feild
         {
@@ -107,10 +115,10 @@
         <a href="index.html">
             <span class="pull-left glyphicon glyphicon-arrow-left text-bold name-text maintain-margin maintain-padding" style="color:#fff;"></span>
         </a>
-        <span class="text-bold name-text title-text maintain-margin maintain-padding">Register</span>
+        <span class="text-bold name-text title-text maintain-margin maintain-padding font-helvetica">Register</span>
     </div>
    
-    <div class="col-xs-12 register-form" style="margin-top:10vh;">
+    <div class="col-xs-12 register-form font-helvetica" style="margin-top:10vh;">
         <div class="col-xs-12 register-name maintain-margin maintain-padding">
             <div class="col-xs-6 register-fname">
                 <input type="text" name="fname" id="fname" class="input-lg col-xs-12" placeholder="First Name">
@@ -129,7 +137,7 @@
             <input type="password" name="conf-password" id="conf-password" class="input-lg col-xs-12" placeholder="Confirm Password">
         </div>
         <div class="col-xs-12 register-email maintain-margin maintain-padding">
-            <input type="text" name="email" id="email" class="input-lg col-xs-12" placeholder="email">
+            <input type="text" name="email" id="email" class="input-lg col-xs-12" placeholder="Email ID">
         </div> 
         <div class="col-xs-12 submit-form maintain-margin maintain-padding footer">
             

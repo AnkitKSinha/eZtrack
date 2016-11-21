@@ -46,6 +46,13 @@
             border-bottom:2px solid #D3D3D3;
             border-radius:0px;
         }
+        .input-lg:focus
+        {
+            border:none;
+            border-bottom:2px solid #4CAF50;
+            border-radius:0px;
+            outline:none;
+        }
         .maintain-margin
         {
             margin:10px;
@@ -69,19 +76,22 @@
         </div>
     </div>
     
-    <div class="col-xs-12 register-form" style="padding-top:30px;">
+    <div class="col-xs-12 register-form font-helvetica" style="padding-top:35px;">
         <div class="col-xs-12 register-name maintain-margin maintain-padding">
             <div class="col-xs-6 register-fname">
-                <input type="text" name="fname" id="fname" class="input-lg col-xs-12" placeholder="First Name">
+                <em>First Name</em>
+                <input type="text" name="fname" id="fname" class="input-lg col-xs-12" placeholder="First Name" style="padding-left:0px;">
             </div>
             <div class="col-xs-6 register-lname">
-                <input type="text" name="lname" id="lname" class="input-lg col-xs-12" placeholder="Last Name">
+                <em>Last Name</em>
+                <input type="text" name="lname" id="lname" class="input-lg col-xs-12" placeholder="Last Name" style="padding-left:0px;">
             </div>
         </div>
-        <div class="col-xs-12 register-uname maintain-margin maintain-padding" style="padding-top:20px;">
-            <input type="text" name="uname" id="uname" class="input-lg col-xs-12" placeholder="Username">
+        <div class="col-xs-12 register-uname maintain-margin maintain-padding" style="padding-top:25px;">
+            <em>Username</em>
+            <input type="text" name="uname" id="uname" class="input-lg col-xs-12" placeholder="Username" style="padding-left:0px;">
         </div>
-        <div class="col-xs-12 submit-form maintain-margin maintain-padding " style="padding-top:25px;">
+        <div class="col-xs-12 submit-form maintain-margin maintain-padding " style="padding-top:30px;">
                 <button class="btn btn-lg center-block btn-primary register-submit">Make Changes</button>
         </div>
     </div>
