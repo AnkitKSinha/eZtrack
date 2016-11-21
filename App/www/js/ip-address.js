@@ -2,7 +2,7 @@ $(document).ready(function(){
       if (typeof(Storage) !== "undefined") 
         {
             // Store
-            localStorage.setItem("ip", "http://localhost:8080");
+            localStorage.setItem("ip", "http://192.168.1.102:8080");
             // Retrieve
 
         } 

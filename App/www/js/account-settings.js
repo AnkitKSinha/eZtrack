@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-    $(".fa-arrow-left").click(function(){
-       
-        window.location.replace("home.html");
-    });
-
 	$.ajax({
 	           url: localStorage.getItem("ip")+"/eztrack/GetAccountDetails.jsp",
 	            type:"GET",
@@ -13,11 +8,12 @@ $(document).ready(function(){
 	        	},
 	            success: function(result){
 	                       res = JSON.parse(result);
-	                       if(res.name == "null"){
+	                       if((res.name == "null")){
 	                       		window.location.replace("index.html");
 	                       }
 	                       else{
-	                       		$("#UserFullName").text(res.name);
+	                       		$("#UserFullName > em").text(res.name);
+	                       		$("#UserUsername > em").text(res.username);
 	                       }
 
 	                    },
