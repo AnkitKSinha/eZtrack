@@ -3,7 +3,6 @@
 <p>
   <i>Download and install mysql server </i>
   <pre>$sudo apt-get install mysql-server-5.6</pre>
-  <b>Do NOT give your own password! Ask me first!</b><br>
   <i>Create db eztrack</i>
   <pre>$mysql</pre>
   <pre> >>>create database eztrack</pre>
